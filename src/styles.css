@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap');
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #0e1538;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 500px;
+    height: 400px;
+    background: turquoise;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    height: 160%;
+    width: 150px;
+    background-color: pink;
+    animation: animate 4s linear infinite;
+}
+
+.container::after {
+    content: '';
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(360deg);
+    }
+}
+
+.slide1 {
+    height: 380px;
+    width: 480px;
+    background-image: url("/src/assets/630x355.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    border-radius: 20px;
+    z-index: 100;
+}
+
+button {
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+    z-index: 200;
+}
+
+.fa-circle-arrow-right {
+    position: absolute;
+    left: 200px; 
+    top: auto;
+    color: white;
+    scale: 2;
+}
+
+.fa-circle-arrow-left {
+    position: absolute;
+    right: 200px;
+    top: auto;
+    color: white;
+    scale: 2;
+}
+
+.slide2 {
+    height: 380px;
+    width: 480px;
+    background-image: url("/src/assets/calle-gran-via-madrid-s333961043.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    border-radius: 20px;
+    display: none;
+    z-index: 100;
+}
+
+.slide3 {
+    height: 380px;
+    width: 480px;
+    background-image: url("/src/assets/p0929343.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    border-radius: 20px;
+    display: none;
+    z-index: 100;
+}
+
+.slide4 {
+    height: 380px;
+    width: 480px;
+    background-image: url("/src/assets/HERO_UltimateParis_Heroshutterstock_112137761.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    border-radius: 20px;
+    display: none;
+    z-index: 100;
+}
+
+.active {
+    display: flex;
+}
+
+.inactive {
+    display: none;
+}
+
+h1 {
+    position: fixed;
+    top: 60%;
+    left: 40%;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
